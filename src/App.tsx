@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { observer, inject } from 'mobx-react';
 import { AppProps, AppState } from './interfaces/App';
@@ -14,7 +13,7 @@ class App extends Component<AppProps, AppState> {
       <div className='App'>
         {store.user.firstName}'s Spotify. <br />
         My playlists: <br />
-        {store.userPlaylists.map((el: string) => {
+        {store.playlists.map((el: string) => {
           return <li>{el}</li>;
         })}
       </div>
